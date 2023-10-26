@@ -5,3 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is a pen"
+      - uses: actions/checkout@v2
+      - run: |
+          ls -al
+          cd .github/workflows/
+          ls -al
