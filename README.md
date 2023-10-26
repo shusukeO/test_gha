@@ -1,2 +1,2 @@
 # test_gha
-GHA(Github Actions) を試す
+GHA(GitHub Actions) を試す
