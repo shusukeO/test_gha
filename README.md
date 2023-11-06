@@ -45,3 +45,31 @@ jobs:
 
   - ここに書いてある
     - https://docs.github.com/ja/actions/learn-github-actions/variables
+
+- Go でテストしてビルドする
+  - push してテストを回して、テストの結果とともに Github 上に残すことができる
+  - 便利そう！
+  - 参考
+    - https://docs.github.com/ja/actions/automating-builds-and-tests/building-and-testing-go
+
+```YAML
+ name: Go
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21.x'
+      - name: Install dependencies
+        run: go get .
+      - name: Build
+        run: go build -v ./...
+      - name: Test with the Go CLI
+        run: go test
+```
