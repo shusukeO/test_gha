@@ -4,6 +4,10 @@ GHA(GitHub Actions) を試す
 
 ## メモ
 
+- 全般のドキュメント
+
+  - https://docs.github.com/ja/actions
+
 - .github/workflows ディレクトリを作成、それ以下に、.yml ファイルで定義した Actions を配置していく
 
 - ２つの変数
